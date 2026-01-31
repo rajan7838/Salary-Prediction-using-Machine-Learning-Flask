@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Prediction</title>
+</head>
+<body>
+    <h2>Salary Prediction App</h2>
+
+    <form method="post">
+        Age: <input type="number" name="age" required><br><br>
+        Experience (years): <input type="number" name="experience" required><br><br>
+
+        Education:
+        <select name="education">
+            <option>Bachelors</option>
+            <option>Masters</option>
+            <option>PhD</option>
+        </select><br><br>
+
+        Job Role:
+        <select name="job_role">
+            <option>Developer</option>
+            <option>Analyst</option>
+            <option>Manager</option>
+        </select><br><br>
+
+        Location:
+        <select name="location">
+            <option>Metro</option>
+            <option>Non-Metro</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict Salary">
+    </form>
+
+    {% if prediction %}
+        <h3>Predicted Salary: ₹ {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
